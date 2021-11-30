@@ -10,7 +10,7 @@ A **web component** is a custom user-built component which can be used as if it 
 Here, we're going to walk through the process of creating a custom web component by creating a **countdown timer** which will display how much time remains until a certain target timestamp is reached.
 
 ## Example Component Requirements
-Before continuing, let's outline what exactly our custom component should do. It should:
+Before continuing, let's outline what exactly our custom component we'll be making for this example should do. It should:
 * Accept a target timestamp as an input property *targetTimestamp*.
 * Display the amount of time remaining in a text format such as: *1 year, 3 months, 10 days*.
 * Display *target elapsed* if the target timestamp is in the past.
