@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Component Example - Byte This</title>
+
+        <script src="component.js"></script>
+
+        <style>
+            countdown-timer {
+                display: inline-block;
+                border: 1px solid black;
+            }
+        </style>
+
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                const timerEl = document.getElementById("timer");
+
+                document.getElementById("example-input").addEventListener("change", (event) => {
+                    const value = event.target.value;
+                    const date = new Date(value);
+
+                    timer.targetTimestamp = +date;
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>Web Component Example</h1>
+        <p>This web component will render the countdown between now and some target date. It will update itself once per second.</p>
+
+        <h2>Change the Target Timestamp</h2>
+        <input type="datetime-local" id="example-input" value="2100-01-01T00:00">
+
+        <h2>Countdown Timer in Action</h2>
+        <countdown-timer id="timer" target-timestamp="1/1/2100"></countdown-timer>
+
+    </body>
+</html>
